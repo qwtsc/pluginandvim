@@ -1,5 +1,8 @@
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 
+# gcc install for cargo compilation
+sudo apt-get install gcc
+
 # nodejs install for vim plugin coc
 sudo apt-get install nodejs
 
