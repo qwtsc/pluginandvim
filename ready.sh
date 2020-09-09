@@ -6,6 +6,9 @@ sudo apt-get install gcc
 # nodejs install for vim plugin coc
 sudo apt-get install nodejs
 
+# install ag
+sudo apt-get install silversearcher-ag
+
 # install rust
 export RUSTUP_IO_THREADS=1 # windows sublinux bug
 curl https://sh.rustup.rs -sSf | sh
@@ -35,4 +38,5 @@ cp .vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # open vim to use PlugInstall to install plugin
-
+# CocInstall coc-rust-analyzer
+# PlugInstall
