@@ -21,6 +21,7 @@ map <C-a> <Nop>   " Unbind for tmux
 map <C-x> <Nop>
 " let g:syntastic_always_populate_loc_list = 1
 call plug#begin('/home/qwtsc/.vim/plugged')
+Plug 'mattn/emmet-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdcommenter'
@@ -44,6 +45,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'kassio/neoterm'
 call plug#end()
 
+" js autogenerate from https://medium.com/vim-drops/be-a-html-ninja-with-emmet-for-vim-feee15447ef1
+let g:user_emmet_leader_key=','
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <F8> :TagbarToggle<CR>
 map /  <Plug>(incsearch-forward)
