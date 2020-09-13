@@ -21,6 +21,7 @@ map <C-a> <Nop>   " Unbind for tmux
 map <C-x> <Nop>
 " let g:syntastic_always_populate_loc_list = 1
 call plug#begin('/home/qwtsc/.vim/plugged')
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -43,6 +44,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'kassio/neoterm'
 call plug#end()
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <F8> :TagbarToggle<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -68,6 +70,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>= :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>c :Cargo<SPACE>
+nnoremap <leader>pt :Prettier<CR>
 " nmap <C-F10> :Cargo run<CR>
 autocmd FileType rust map <buffer> <C-F10> :w<CR>:Cargo run<CR>
 nmap <C-F8> :Cargo build<CR>
